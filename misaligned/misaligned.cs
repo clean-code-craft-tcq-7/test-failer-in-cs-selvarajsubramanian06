@@ -63,7 +63,8 @@ namespace MisalignedSpace {
             return newArray.ToArray();
         }            
             
-        static int printColorMap() {
+        static int printColorMap() 
+        {
             string[] majorColors = {"White", "Red", "Black", "Yellow", "Violet"};
             string[] minorColors = {"Blue", "Orange", "Green", "Brown", "Slate"};
             
@@ -74,17 +75,25 @@ namespace MisalignedSpace {
             minorColors = correctMisalignedString(minorColors, longestMinorColorString);
             
             int i = 0, j = 0;
-            for(i = 0; i < 5; i++) {
-                for(j = 0; j < 5; j++) {
-                    Console.WriteLine("{0} | {1} | {2}", i * 5 + j, majorColors[i], minorColors[i]);
+            for(i = 0; i < majorColors.Length; i++) 
+            {
+                for(j = 0; j < minorColors.Length; j++) 
+                {
+                    actualColorCodePairList.Add(string.Format("{0} | {1} | {2}", i * minorColors.Length + j, majorColors[i], minorColors[j]));
                 }
             }
-            return i * j;
+            colorCodePairArray = colorCodePairList.ToArray();
+            actualColorCodePairArray = actualColorCodePairList.ToArray();
         }
-        static void Main(string[] args) {
+        
+        static void Main(string[] args) 
+        {
             int result = printColorMap();
-            Debug.Assert(result == 27);
+            Debug.Assert(result == 25);
+            testMisaligned.getColorCodePairList();
+            testMisaligned.printColorCodeMisalignementTest();
             Console.WriteLine("All is well (maybe!)");
+            testMisaligned.falseColorCodePairTest();
         }
     }
 }
