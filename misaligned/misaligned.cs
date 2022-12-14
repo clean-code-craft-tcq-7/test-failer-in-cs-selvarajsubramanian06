@@ -93,7 +93,7 @@ namespace MisalignedSpace {
             testMisaligned.getColorCodePairList();
             testMisaligned.printColorCodeMisalignementTest();
             Console.WriteLine("All is well (maybe!)");
-            testMisaligned.falseColorCodePairTest();
+            testMisaligned.falseColorCodePairTest();           
         }
     }
 }
