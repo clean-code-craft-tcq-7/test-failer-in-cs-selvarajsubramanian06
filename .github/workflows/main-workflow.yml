@@ -11,11 +11,8 @@ jobs:
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
       - run: |
-          cd tshirts
-          dotnet run
+          cd tshirts          
       - run: |
-          cd misaligned
-          dotnet run
+          cd misaligned          
       - run: |
-          cd alerter
-          dotnet run
+          cd alerter         
