@@ -1,8 +1,10 @@
 using System;
 using System.Diagnostics;
 
-namespace MisalignedSpace {
-    class Misaligned {
+namespace MisalignedSpace 
+{
+    class Misaligned 
+    {
         
         List<string> actualColorCodePairList = new List<string>();
         List<string> colorCodePairList = new List<string>();
